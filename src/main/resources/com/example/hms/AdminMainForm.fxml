@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="73.0" layoutY="94.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="40.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="40.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="865.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="37.0" layoutY="12.0" text="Hospital Mangement System">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Circle fill="DODGERBLUE" layoutX="998.0" layoutY="20.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label layoutX="1035.0" layoutY="12.0" text="Active" />
+                        <Circle fill="#10fc63" layoutX="1081.0" layoutY="21.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Label layoutX="847.0" layoutY="13.0" text="Welcome" />
+                        <Label layoutX="911.0" layoutY="13.0" prefHeight="17.0" prefWidth="70.0" text="Sareer" />
+                        <Label layoutX="235.0" layoutY="13.0" prefHeight="17.0" prefWidth="340.0" text="Dashboard">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_RIGHT" layoutX="635.0" layoutY="13.0" prefHeight="17.0" prefWidth="201.0" text="Welcome" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="560.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="87.0" layoutX="65.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@user2n.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
