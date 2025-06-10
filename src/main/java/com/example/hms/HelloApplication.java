@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
 
         stage.setTitle("Hospital Management System");
         stage.setScene(scene);
-     //   stage.setFullScreen(true);  // full screen view
+  // stage.setFullScreen(true);  // full screen view
         stage.show();
     }
 

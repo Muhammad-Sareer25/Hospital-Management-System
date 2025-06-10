@@ -16,3 +16,28 @@
 .bg-color-1{
  -fx-background-color: linear-gradient(to bottom right,    #8A0303, #300000);
 }
+
+.btn-1{
+ -fx-background-color: transparent;
+ -fx-border-color: #fff;
+ -fx-border-width: .5px;
+ -fx-border-text-fill: #fff;
+ -fx-font-family: Arial;
+ -fx-cursor: hand;
+ -fx-font-size: 13px;
+
+}
+
+  /*Button feeling that the button has been click*/
+  .btn-1:hover{
+ -fx-background-color: #fff;
+ -fx-text-fill: #000;
+ -fx-
+}
+
+/*dashboad written anchorpane border*/
+
+.border-top{
+  -fx-border-color: #000;
+  -fx-border-width: .5px 0 .4px 0;  /* 0 .4px 0    red color border remove*/
+}
