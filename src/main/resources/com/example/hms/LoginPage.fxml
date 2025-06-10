@@ -14,60 +14,101 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.HelloController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@LoginPage.css">
+      <AnchorPane fx:id="main_form">
          <children>
-            <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="119.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@user3cpy.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="115.0" layoutY="111.0" text="Login account ">
-               <font>
-                  <Font name="Tahoma" size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="141.0" layoutY="135.0" text="Admin Portal" />
-            <TextField layoutX="29.0" layoutY="179.0" prefHeight="30.0" prefWidth="300.0" promptText="Username:" stylesheets="@LoginPage.css">
-               <styleClass>
-                  <String fx:value="white-bg" />
-                  <String fx:value="textfield-1" />
-               </styleClass>
-            </TextField>
-            <TextField layoutX="29.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
-               <styleClass>
-                  <String fx:value="white-bg" />
-                  <String fx:value="textfield-1" />
-               </styleClass>
-            </TextField>
-            <PasswordField layoutX="29.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
-               <styleClass>
-                  <String fx:value="textfield-1" />
-                  <String fx:value="white-bg" />
-               </styleClass>
-            </PasswordField>
-            <CheckBox layoutX="29.0" layoutY="264.0" mnemonicParsing="false" text="Show Password" />
-            <Button layoutX="31.0" layoutY="306.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" stylesheets="@LoginPage.css" text="Login">
-               <styleClass>
-                  <String fx:value="btn-1" />
-                  <String fx:value="radius" />
-               </styleClass>
-            </Button>
-            <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="125.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@cpydone.png" />
-               </image>
-            </ImageView>
-            <ComboBox layoutX="106.0" layoutY="525.0" prefWidth="150.0" promptText="Select User" stylesheets="@LoginPage.css">
-               <styleClass>
-                  <String fx:value="textfield-1" />
-                  <String fx:value="white-bg" />
-               </styleClass>
-            </ComboBox>
-            <Label layoutX="35.0" layoutY="564.0" text="Have no account?" />
-            <Hyperlink layoutX="133.0" layoutY="561.0" text="Create Account" />
+            <AnchorPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0" stylesheets="@LoginPage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="119.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user3cpy.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="115.0" layoutY="111.0" text="Login account ">
+                     <font>
+                        <Font name="Tahoma" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="135.0" text="Admin Portal" />
+                  <TextField fx:id="login_form_user" layoutX="29.0" layoutY="179.0" prefHeight="30.0" prefWidth="300.0" promptText="Username:" stylesheets="@LoginPage.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="textfield-1" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="login_form_showpassword" layoutX="29.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="textfield-1" />
+                     </styleClass>
+                  </TextField>
+                  <PasswordField fx:id="login_form_password" layoutX="29.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
+                     <styleClass>
+                        <String fx:value="textfield-1" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                  </PasswordField>
+                  <CheckBox fx:id="login_form_checkbox" layoutX="29.0" layoutY="264.0" mnemonicParsing="false" text="Show Password" />
+                  <Button fx:id="login_form_login" layoutX="31.0" layoutY="306.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" styleClass="btn-1" stylesheets="@LoginPage.css" text="Login" />
+                  <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="125.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cpydone.png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox fx:id="login_form_selectuser" layoutX="106.0" layoutY="525.0" prefWidth="150.0" promptText="Select User" />
+                  <Label layoutX="35.0" layoutY="564.0" text="Have no account?" />
+                  <Hyperlink fx:id="login_form_createacc" layoutX="133.0" layoutY="561.0" onAction="#switchForm" text="Create Account" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="new_acc_form" prefHeight="200.0" prefWidth="200.0" stylesheets="@LoginPage.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="89.0" fitWidth="95.0" layoutX="131.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@l71RqgzoFAiL._AC_SL1500_.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="115.0" layoutY="111.0" text="Create Account">
+                     <font>
+                        <Font name="Tahoma" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="135.0" text="Admin Portal" />
+                  <TextField fx:id="new_acc_email" layoutX="33.0" layoutY="189.0" prefHeight="30.0" prefWidth="300.0" promptText="Email Address:" stylesheets="@LoginPage.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="textfield-1" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="new_acc_user" layoutX="32.0" layoutY="235.0" prefHeight="30.0" prefWidth="300.0" promptText="Username:" stylesheets="@LoginPage.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="textfield-1" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="new_acc_showpassword" layoutX="32.0" layoutY="279.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="textfield-1" />
+                     </styleClass>
+                  </TextField>
+                  <PasswordField fx:id="new_acc_password" layoutX="32.0" layoutY="279.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
+                     <styleClass>
+                        <String fx:value="textfield-1" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                  </PasswordField>
+                  <CheckBox fx:id="new_acc_chekbox" layoutX="32.0" layoutY="320.0" mnemonicParsing="false" text="Show Password" />
+                  <Button fx:id="new_acc_signup" layoutX="34.0" layoutY="362.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" styleClass="btn-1" stylesheets="@LoginPage.css" text="Sign Up" />
+                  <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="125.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cpydone.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="35.0" layoutY="564.0" text="Already have account?" />
+                  <Hyperlink fx:id="new_acc_loginhere" layoutX="157.0" layoutY="561.0" onAction="#switchForm" text="Login here" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
