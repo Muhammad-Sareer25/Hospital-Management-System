@@ -1,0 +1,36 @@
+
+
+.white-bg{ /*makes the background white*/
+-fx-background-color: #fff;
+
+}
+
+.radius{
+-fx-background-radius: 6px;
+
+}
+
+.textfield-1{                  /*chages the border color and font */
+  -fx-border-color: #000;
+  -fx-border-width: .3px;
+  -fx-font-family: Tahoma;
+
+}
+
+.textfield-1:focused{/*when u click on the user name or password so the boreder disappaer*/
+fx-background-color: linear-gradient(to bottom right,    #8A0303, #300000);
+-fx-border-width: .1px;
+}
+
+.btn-1{
+ -fx-background-color:  linear-gradient(to bottom right,    #8A0303, #300000);
+ -fx-cursor: hand;
+ -fx-text-fill: #fff;
+ -fx-font-size: 14px;
+ -fx-font-family: Arial;
+
+}
+
+.btn-1:hover{   /*login button changes the color when i touched by cursor */
+ -fx-background-color:  linear-gradient(to bottom right,  #630330, #DC143C);
+}
