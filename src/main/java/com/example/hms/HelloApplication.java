@@ -17,6 +17,8 @@ public class HelloApplication extends Application {
 
 
 
+        stage.setMinWidth(370);   //sizing will not become less than 350
+        stage.setMinHeight(620);
 
 
 
