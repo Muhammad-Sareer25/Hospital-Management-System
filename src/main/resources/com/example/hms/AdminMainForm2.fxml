@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.AdMnFm2Controller">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -31,8 +31,7 @@
                         <Circle fill="DODGERBLUE" layoutX="1006.0" layoutY="21.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="81.0" />
                         <Label layoutX="1035.0" layoutY="12.0" text="Active" AnchorPane.rightAnchor="32.0" />
                         <Circle fill="#06dd52" layoutX="1081.0" layoutY="21.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="14.0" />
-                        <Label layoutX="811.0" layoutY="13.0" text="Welcome" AnchorPane.rightAnchor="239.0" />
-                        <Label layoutX="874.0" layoutY="12.0" prefHeight="19.0" prefWidth="110.0" text="Sareer Khan" AnchorPane.rightAnchor="116.0">
+                        <Label fx:id="LoggedPerson" layoutX="874.0" layoutY="12.0" prefHeight="19.0" prefWidth="182.0" AnchorPane.rightAnchor="116.0">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
@@ -54,13 +53,13 @@
                            </image>
                         </ImageView>
                         <Label layoutX="11.0" layoutY="144.0" text="Admin ID:" textFill="WHITE" />
-                        <Label layoutX="72.0" layoutY="143.0" prefHeight="17.0" prefWidth="134.0" text="1" textFill="WHITE">
+                        <Label fx:id="adminIdLabel" layoutX="72.0" layoutY="143.0" prefHeight="17.0" prefWidth="134.0" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label layoutX="11.0" layoutY="164.0" text="Admin ID:" textFill="WHITE" />
-                        <Label layoutX="71.0" layoutY="163.0" prefHeight="17.0" prefWidth="134.0" text="Sareer Khan" textFill="WHITE">
+                        <Label layoutX="11.0" layoutY="164.0" text="Admin Name:" textFill="WHITE" />
+                        <Label fx:id="AdminNameLabel" layoutX="84.0" layoutY="163.0" prefHeight="20.0" prefWidth="146.0" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -80,7 +79,14 @@
                   </AnchorPane>
                </left>
                <center>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="561.0" fitWidth="835.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MAINPG.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
                </center>
             </BorderPane>
          </children>

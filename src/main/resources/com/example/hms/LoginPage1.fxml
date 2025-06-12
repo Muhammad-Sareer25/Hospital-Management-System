@@ -2,7 +2,6 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
@@ -37,20 +36,13 @@
                         <String fx:value="textfield-1" />
                      </styleClass>
                   </TextField>
-                  <TextField fx:id="login_form_showpassword" layoutX="29.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
-                     <styleClass>
-                        <String fx:value="white-bg" />
-                        <String fx:value="textfield-1" />
-                     </styleClass>
-                  </TextField>
                   <PasswordField fx:id="login_form_password" layoutX="29.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
                         <String fx:value="white-bg" />
                      </styleClass>
                   </PasswordField>
-                  <CheckBox fx:id="login_form_checkbox" layoutX="29.0" layoutY="264.0" mnemonicParsing="false" text="Show Password" />
-                  <Button fx:id="login_form_login" layoutX="31.0" layoutY="306.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" styleClass="btn-1" stylesheets="@LoginPage.css" text="Login" />
+                  <Button fx:id="login_form_login" layoutX="31.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="45.0" prefWidth="300.0" styleClass="btn-1" stylesheets="@LoginPage.css" text="Login" />
                   <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="125.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@cpydone.png" />
@@ -86,20 +78,13 @@
                         <String fx:value="textfield-1" />
                      </styleClass>
                   </TextField>
-                  <TextField fx:id="new_acc_showpassword" layoutX="32.0" layoutY="279.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
-                     <styleClass>
-                        <String fx:value="white-bg" />
-                        <String fx:value="textfield-1" />
-                     </styleClass>
-                  </TextField>
                   <PasswordField fx:id="new_acc_password" layoutX="32.0" layoutY="279.0" prefHeight="30.0" prefWidth="300.0" promptText="Password:" stylesheets="@LoginPage.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
                         <String fx:value="white-bg" />
                      </styleClass>
                   </PasswordField>
-                  <CheckBox fx:id="new_acc_chekbox" layoutX="32.0" layoutY="320.0" mnemonicParsing="false" text="Show Password" />
-                  <Button fx:id="new_acc_signup" layoutX="34.0" layoutY="362.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="300.0" styleClass="btn-1" stylesheets="@LoginPage.css" text="Sign Up" />
+                  <Button fx:id="new_acc_signup" layoutX="34.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="45.0" prefWidth="300.0" styleClass="btn-1" stylesheets="@LoginPage.css" text="Sign Up" />
                   <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="125.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@cpydone.png" />
