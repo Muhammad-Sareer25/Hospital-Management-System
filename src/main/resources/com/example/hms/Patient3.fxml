@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="998.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.Patient3Controller">
+   <children>
+      <StackPane fx:id="mainContent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+         <!-- Main Patient View -->
+         <AnchorPane fx:id="MAIN_base_patient" prefHeight="600.0" prefWidth="998.0">
+            <children>
+               <!-- Top Header Bar -->
+               <AnchorPane prefHeight="40.0" prefWidth="998.0" styleClass="border-top" stylesheets="@AdminMainForn.css">
+                  <children>
+                     <AnchorPane prefHeight="40.0" prefWidth="255.0" styleClass="bg-color-1" stylesheets="@AdminMainForn.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                           <Label layoutX="37.0" layoutY="12.0" text="Hospital Mangement System" textFill="#fffefe">
+                              <font><Font size="13.0" /></font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                     <Circle fill="DODGERBLUE" layoutX="1006.0" layoutY="21.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="81.0" />
+                     <Label layoutX="1035.0" layoutY="12.0" text="Active" AnchorPane.rightAnchor="32.0" />
+                     <Circle fill="#06dd52" layoutX="1081.0" layoutY="21.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="14.0" />
+                     <Label fx:id="LoggedPerson" layoutX="874.0" layoutY="12.0" prefHeight="19.0" prefWidth="182.0" AnchorPane.rightAnchor="116.0">
+                        <font><Font name="System Bold" size="13.0" /></font>
+                     </Label>
+                     <Label layoutX="259.0" layoutY="11.0" prefHeight="17.0" prefWidth="340.0" text="Patients" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="11.0">
+                        <font><Font size="15.0" /></font>
+                     </Label>
+                     <Label alignment="TOP_RIGHT" layoutX="599.0" layoutY="13.0" prefHeight="17.0" prefWidth="201.0" text="DD:MM:YYYY" AnchorPane.rightAnchor="300.0" />
+                  </children>
+               </AnchorPane>
+
+               <!-- Table of Patients -->
+               <TableView fx:id="Pat_Table" layoutY="142.0" prefHeight="460.0" prefWidth="998.0">
+                  <columns>
+                     <TableColumn fx:id="Tab_Pat_id" prefWidth="135.0" text="Patient ID" />
+                     <TableColumn fx:id="Tab_Pat_Fname" prefWidth="144.0" text="First Name" />
+                     <TableColumn fx:id="Tab_Pat_Lname" prefWidth="114.0" text="Last Name" />
+                     <TableColumn fx:id="Tab_Pat_Con" prefWidth="110.0" text="Patient Contact" />
+                     <TableColumn fx:id="Tab_Pat_Gen" prefWidth="139.0" text="Gender" />
+                     <TableColumn fx:id="Tab_Pat_Age" prefWidth="88.0" text="Age" />
+                     <TableColumn fx:id="Tab_Pat_Add" prefWidth="201.0" text="Address" />
+                  </columns>
+               </TableView>
+
+               <!-- Search + Add Section -->
+               <AnchorPane layoutY="38.0" prefHeight="104.0" prefWidth="998.0" styleClass="bg-color-1" stylesheets="@AdminMainForn.css">
+                  <children>
+                     <Label text="| Patients" textFill="#f0f0f0">
+                        <font><Font name="Century" size="72.0" /></font>
+                     </Label>
+                     <TextField layoutX="499.0" layoutY="14.0" prefHeight="25.0" prefWidth="386.0" promptText="Enter Patient ID &quot;PT***&quot;" />
+                     <Button layoutX="893.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Search" />
+                     <Button fx:id="add_pat_btn" layoutX="893.0" layoutY="45.0" mnemonicParsing="false" onAction="#add_pat_formOPEN" prefHeight="25.0" prefWidth="80.0" text="Add Patient" />
+                  </children>
+               </AnchorPane>
+            </children>
+         </AnchorPane>
+
+      </StackPane>
+   </children>
+</AnchorPane>

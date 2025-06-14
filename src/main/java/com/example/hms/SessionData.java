@@ -1,5 +1,5 @@
 package com.example.hms;
-//this class is for logged admin
+//this class is for logged admin   // with controller 2 connected
 
 
 public class SessionData {

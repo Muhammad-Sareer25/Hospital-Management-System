@@ -1,8 +1,16 @@
 package com.example.hms;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,6 +25,8 @@ public class AdMnFm2Controller {
     @FXML
     private Label adminIdLabel;
 
+    @FXML
+    private Button Admin_Pat_btn;
 
     @FXML
     public void initialize() {
@@ -44,7 +54,18 @@ public class AdMnFm2Controller {
         }
     }
 
-
+    @FXML
+    public void handlePatientButton(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Patient3.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // get current stage
+            stage.setScene(new Scene(root));
+            stage.setTitle("Patient Page");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }
