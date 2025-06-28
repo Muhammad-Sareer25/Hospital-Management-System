@@ -21,7 +21,7 @@
       <TextField fx:id="add_pat_age" layoutX="13.0" layoutY="484.0" prefHeight="40.0" prefWidth="325.0" promptText="Enter age" />
       <TextField fx:id="add_pat_address" layoutX="13.0" layoutY="554.0" prefHeight="40.0" prefWidth="325.0" promptText="Enter address" />
       <Label layoutX="14.0" layoutY="533.0" text="Address" textFill="WHITE" />
-      <Button layoutX="255.0" layoutY="5.0" mnemonicParsing="false" text="Submit form" />
+      <Button fx:id="pat_sub_button" layoutX="255.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleSubmitPatient" text="Submit form" />
       <Button fx:id="Back_btn" layoutX="208.0" layoutY="5.0" mnemonicParsing="false" onAction="#backToMainPatientForm" text="Back" />
    </children>
 </AnchorPane>

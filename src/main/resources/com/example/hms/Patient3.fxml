@@ -59,8 +59,8 @@
                      <Label text="| Patients" textFill="#f0f0f0">
                         <font><Font name="Century" size="72.0" /></font>
                      </Label>
-                     <TextField layoutX="499.0" layoutY="14.0" prefHeight="25.0" prefWidth="386.0" promptText="Enter Patient ID &quot;PT***&quot;" />
-                     <Button layoutX="893.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Search" />
+                     <TextField fx:id="pat_search_bar" layoutX="499.0" layoutY="14.0" prefHeight="25.0" prefWidth="386.0" promptText="Enter Patient ID &quot;PT***&quot;" />
+                     <Button fx:id="pat_srach_btn" layoutX="893.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlePatientSearch" prefHeight="25.0" prefWidth="80.0" text="Search" />
                      <Button fx:id="add_pat_btn" layoutX="893.0" layoutY="45.0" mnemonicParsing="false" onAction="#add_pat_formOPEN" prefHeight="25.0" prefWidth="80.0" text="Add Patient" />
                   </children>
                </AnchorPane>

@@ -57,10 +57,18 @@ public class Patient3Controller  implements javafx.fxml.Initializable {
     private Button add_pat_btn;
 
     @FXML
+    private TextField pat_search_bar;
+
+
+    @FXML
     private StackPane mainContent;
 
     @FXML
     private AnchorPane rootPane;
+
+
+
+
 
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -145,5 +153,77 @@ public class Patient3Controller  implements javafx.fxml.Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
+
+
+
+//search bar method
+@FXML
+private void handlePatientSearch(ActionEvent event) {
+    String patId = pat_search_bar.getText().trim();
+
+    if (patId.isEmpty()) {
+        showAlert(Alert.AlertType.WARNING, "Please enter a Patient ID to search.");
+        return;
+    }
+
+    String query = "SELECT * FROM Patients WHERE pat_id = ?";
+
+    try (Connection conn = DB_Connection.connDB();
+         PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+        pstmt.setString(1, patId);
+        var rs = pstmt.executeQuery();
+
+        if (rs.next()) {
+            // Format patient info
+            String fullName = rs.getString("First_name") + " " + rs.getString("Last_name");
+            String info = """
+                    🆔 Patient ID:   %s
+                    📞 Contact:      %s
+                    🧑 Gender:       %s
+                    🎂 Age:          %d
+                    🏠 Address:      %s
+                    """.formatted(
+                    rs.getString("pat_id"),
+                    rs.getString("pat_Contact"),
+                    rs.getString("gender"),
+                    rs.getInt("age"),
+                    rs.getString("address")
+            );
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Patient Details");
+            alert.setHeaderText("👤 " + fullName);
+            alert.setContentText(info);
+
+            // Optional: allow resizing if text is long
+            alert.getDialogPane().setPrefWidth(400);
+            alert.getDialogPane().setPrefHeight(250);
+            alert.setResizable(true);
+
+            alert.showAndWait();
+
+        } else {
+            showAlert(Alert.AlertType.INFORMATION, "No patient found with ID: " + patId);
+        }
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        showAlert(Alert.AlertType.ERROR, "Error: " + e.getMessage());
+    }
+}
+
+    private void showAlert(Alert.AlertType type, String message) {
+        Alert alert = new Alert(type);
+        alert.setTitle("Notice");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+
+
 }
