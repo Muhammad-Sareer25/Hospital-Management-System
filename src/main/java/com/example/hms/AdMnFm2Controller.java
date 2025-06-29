@@ -29,6 +29,8 @@ public class AdMnFm2Controller {
     private Button Admin_Pat_btn;
 
     @FXML
+    private Button Admin_doc_btn;
+    @FXML
     public void initialize() {
         String username = SessionData.getLoggedInAdmin();
 
@@ -67,5 +69,16 @@ public class AdMnFm2Controller {
         }
     }
 
-
+    @FXML
+    public void handleDoctorButton(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("doc4.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // get current stage
+            stage.setScene(new Scene(root));
+            stage.setTitle("Doctor Page");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

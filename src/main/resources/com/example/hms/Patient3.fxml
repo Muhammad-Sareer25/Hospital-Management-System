@@ -37,6 +37,7 @@
                         <font><Font size="15.0" /></font>
                      </Label>
                      <Label alignment="TOP_RIGHT" layoutX="599.0" layoutY="13.0" prefHeight="17.0" prefWidth="201.0" text="DD:MM:YYYY" AnchorPane.rightAnchor="300.0" />
+                     <Button fx:id="bak_btn_doc" layoutX="3.0" layoutY="5.0" onAction="#goback" prefHeight="25.0" prefWidth="26.0" styleClass="back-button" stylesheets="@AdminMainForn.css" text="⏪" />
                   </children>
                </AnchorPane>
 

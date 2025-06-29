@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="add_doc_scene" prefHeight="457.0" prefWidth="350.0" styleClass="bg-color-1" stylesheets="@AdminMainForn.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.addDocController">
+   <children>
+      <TextField fx:id="add_doc_id" layoutX="13.0" layoutY="37.0" prefHeight="40.0" prefWidth="325.0" promptText="Enter Doctor ID(DOC***)" />
+      <Label layoutX="14.0" layoutY="6.0" text="Doc ID" textFill="WHITE" />
+      <Label layoutX="12.0" layoutY="99.0" text="Doctor Name" textFill="WHITE" />
+      <TextField fx:id="add_doc_name" layoutX="13.0" layoutY="128.0" prefHeight="40.0" prefWidth="325.0" promptText="Enter name" />
+      <TextField fx:id="add_doc_sp" layoutX="13.0" layoutY="219.0" prefHeight="40.0" prefWidth="325.0" promptText="Enter doctor specialization" />
+      <Label layoutX="12.0" layoutY="189.0" prefHeight="17.0" prefWidth="122.0" text="Doctor Specialization" textFill="WHITE" />
+      <TextField fx:id="add_doc_cont" layoutX="13.0" layoutY="309.0" prefHeight="40.0" prefWidth="325.0" promptText="Enter contact" />
+      <Label layoutX="14.0" layoutY="281.0" text="Contact" textFill="WHITE" />
+      <Button fx:id="doc_sub_btn" layoutX="255.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleSubmitDoctor" text="Submit form" />
+      <Button fx:id="bck_btn" layoutX="208.0" layoutY="5.0" mnemonicParsing="false" onAction="#backToMainDoctorForm" text="Back" />
+      <TextField fx:id="add_doc_adrs" layoutX="13.0" layoutY="397.0" prefHeight="40.0" prefWidth="325.0" promptText="Enter address" />
+      <Label layoutX="12.0" layoutY="371.0" text="Address" textFill="WHITE" />
+   </children>
+</AnchorPane>

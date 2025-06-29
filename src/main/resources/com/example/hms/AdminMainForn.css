@@ -41,3 +41,25 @@
   -fx-border-color: #000;
   -fx-border-width: .5px 0 .4px 0;  /* 0 .4px 0    red color border remove*/
 }
+
+
+//back btn css
+
+.back-button {
+    -fx-background-color: linear-gradient(to right, #FF6A00, #FFB347);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 2, 2);
+}
+
+.back-button:hover {
+    -fx-background-color: linear-gradient(to right, #43e97b, #38f9d7);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 2, 2);
+}
+
+

@@ -135,27 +135,29 @@ public class Patient3Controller  implements javafx.fxml.Initializable {
         }
     }
 
+
     @FXML
-    private void backToMainPatientForm(ActionEvent event) {
+    private void goback(ActionEvent event) {
         try {
-            // Load the previous FXML scene (main patient view)
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Patient3.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminMainForm2.fxml"));
             Parent root = loader.load();
-
-            Stage stage = new Stage();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Patient Management");
+            stage.setTitle("Dashboard");
             stage.show();
-
-            // Close the current window (i.e., AddPatient form)
-            ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
-
         } catch (IOException e) {
             e.printStackTrace();
+            showAlertp(Alert.AlertType.ERROR, "Failed to load previous screen.");
         }
-
     }
 
+    private void showAlertp(Alert.AlertType type, String message) {    // if no p so same method would be call
+        Alert alert = new Alert(type);
+        alert.setTitle("Notice");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
 
 
 
