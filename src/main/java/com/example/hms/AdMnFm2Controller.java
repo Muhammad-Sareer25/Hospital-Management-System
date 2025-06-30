@@ -81,4 +81,17 @@ public class AdMnFm2Controller {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void Appointment_btn_admin(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("appot5.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Appointments Page");
+
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

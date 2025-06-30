@@ -14,7 +14,7 @@ public class DB_Connection {
 
             Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_management_system",
                     "root",
-                    "Batman@2025sql");
+                    "khan");
             return connect;
 
         } catch (Exception e) {

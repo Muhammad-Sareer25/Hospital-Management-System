@@ -69,7 +69,7 @@
                         <Button layoutX="14.0" layoutY="240.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" styleClass="btn-1" stylesheets="@AdminMainForn.css" text="Logout" textFill="WHITE" />
                         <Button fx:id="Admin_doc_btn" layoutX="14.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleDoctorButton" prefHeight="40.0" prefWidth="225.0" styleClass="btn-1" stylesheets="@AdminMainForn.css" text="Doctor" textFill="WHITE" />
                         <Button fx:id="Admin_Pat_btn" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" onAction="#handlePatientButton" prefHeight="40.0" prefWidth="225.0" styleClass="btn-1" stylesheets="@AdminMainForn.css" text="Patient" textFill="WHITE" />
-                        <Button layoutX="15.0" layoutY="386.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" styleClass="btn-1" stylesheets="@AdminMainForn.css" text="Appointments" textFill="WHITE" />
+                        <Button fx:id="app_main_btn" layoutX="15.0" layoutY="386.0" mnemonicParsing="false" onAction="#Appointment_btn_admin" prefHeight="40.0" prefWidth="225.0" styleClass="btn-1" stylesheets="@AdminMainForn.css" text="Appointments" textFill="WHITE" />
                         <ImageView fitHeight="85.0" fitWidth="87.0" layoutX="75.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@HOSPITAL.png" />
